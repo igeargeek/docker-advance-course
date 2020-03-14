@@ -7,6 +7,7 @@
 - [x] docker swarm stack (T)
 - [x] network (T)
 - [ ] volume (T)
+- [ ] Rolling update (T)
 - [ ] architecture overview (T)
 - [x] set เครื่องจริง กลุ่มละ 2 เครื่อง (T)
 

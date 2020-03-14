@@ -4,8 +4,7 @@
 - [x] docker swarm concept vs k8s (T)
 - [x] docker swarm init (T)
 - [x] docker swarm service (T)
-- [ ] docker swarm load balancing (T)
-- [ ] docker swarm stack (T)
+- [x] docker swarm stack (T)
 - [ ] architecture overview (T)
 - [ ] set เครื่องจริง กลุ่มละ 2 เครื่อง (T)
 

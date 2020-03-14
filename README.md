@@ -5,8 +5,10 @@
 - [x] docker swarm init (T)
 - [x] docker swarm service (T)
 - [x] docker swarm stack (T)
+- [x] network (T)
+- [ ] volume (T)
 - [ ] architecture overview (T)
-- [ ] set เครื่องจริง กลุ่มละ 2 เครื่อง (T)
+- [x] set เครื่องจริง กลุ่มละ 2 เครื่อง (T)
 
 - [ ] portianer
 	- [ ] stack

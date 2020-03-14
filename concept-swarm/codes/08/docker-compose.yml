@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginxdemos/hello
+    ports:
+    - "8081:80"
+    deploy:
+      replicas: 5
+    networks: 
+      - myNetwork
+
+networks:
+  myNetwork:
+    external: true

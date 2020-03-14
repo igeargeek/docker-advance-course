@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  api:
+    image: iamsvz/nuxt.js-course-api
+    volumes:
+      - ./image:/app/src/public
+    ports:
+      - 9119:8000
+    depends_on:
+      - db
+    links:
+      - db
+    environment:
+      ACCESS_TOKEN_SECRET: "smxcua9hj38qnfdqedxwiq"
+      REFRESH_TOKEN_SECRET: "daskdijqwddi21n"
+      MONGO_DBNAME: "movie_ticket"
+      MONGO_URI: "mongodb://db:27017"
+
+  db:
+    image: mongo
+    volumes:
+      - ./data:/data

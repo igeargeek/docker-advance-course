@@ -16,9 +16,9 @@
 	- [ ] network
 	- [ ] volume
 - [ ] gitlab + registry gitlab
-- [ ] ci / cd (T)
-	- [ ] pipeline
-	- [ ] gitlab runner
+- [x] ci / cd (T)
+	- [x] pipeline
+	- [x] gitlab runner
 - [ ] Log monitoring
 
 

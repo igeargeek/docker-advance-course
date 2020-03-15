@@ -9,3 +9,61 @@
 
 
 ![alt text](https://www.ostechnix.com/wp-content/uploads/2017/01/Portainer-Chromium_019.png)
+
+เมื่อเราแยก บาง Container ออกจาก stack แล้วยังต้องการให้ Container ที่แยกออกยังสามารถติดต่อกับ Container เดิมได้
+
+```
+version: '3'
+services:
+  db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
+       MYSQL_DATABASE: wpdb
+       MYSQL_USER: wpuser
+       MYSQL_PASSWORD: wpass
+     networks:
+      - network-public
+  wordpress:
+     image: wordpress:latest
+     ports:
+       - :80
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_NAME: wpdb
+       WORDPRESS_DB_USER: wpuser
+       WORDPRESS_DB_PASSWORD: wpass
+     depends_on:
+       - db
+     networks:
+       - network-public
+networks:
+  network-public:
+    external: true
+volumes:
+    db_data:
+```
+
+
+```
+version: '3'
+services:
+   
+   pma:
+     image: phpmyadmin/phpmyadmin
+     ports:
+       - 8088:80
+     restart: always
+     environment:
+       PMA_HOST: db
+       PMA_PORT: 3306
+     networks:
+       - network-public
+networks:
+  network-public:
+    external: true
+```

@@ -15,7 +15,7 @@
 	- [x] stack
 	- [x] network
 	- [x] volume
-- [ ] gitlab + registry gitlab
+- [x] gitlab + registry gitlab
 - [x] ci / cd (T)
 	- [x] pipeline
 	- [x] gitlab runner

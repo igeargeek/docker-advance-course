@@ -12,6 +12,7 @@
 
 เมื่อเราแยก บาง Container ออกจาก stack แล้วยังต้องการให้ Container ที่แยกออกยังสามารถติดต่อกับ Container เดิมได้
 
+wordpress.stack
 ```
 version: '3'
 services:
@@ -49,6 +50,7 @@ volumes:
 ```
 
 
+pma.stack
 ```
 version: '3'
 services:

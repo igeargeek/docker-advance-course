@@ -11,15 +11,14 @@
 - [ ] architecture overview (T)
 - [x] set เครื่องจริง กลุ่มละ 2 เครื่อง (T)
 
-- [ ] portianer
-	- [ ] stack
-	- [ ] network
-	- [ ] volume
-- [ ] gitlab + registry gitlab
+- [x] portianer
+	- [x] stack
+	- [x] network
+	- [x] volume
+- [x] gitlab + registry gitlab
 - [x] ci / cd (T)
 	- [x] pipeline
 	- [x] gitlab runner
-- [ ] Log monitoring
 
 
 **Workshop**
